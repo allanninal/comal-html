@@ -13,7 +13,10 @@ Comal is a free, plain-HTML website for a Mexican restaurant. Open `index.html` 
 ## What's inside
 
 - **Hero** — a photo of the dining room under a dark overlay, the rating, the address and two calls to action
-- **Menu** — tabbed (Tacos, Antojitos, Platos Fuertes, Bebidas) with prices and vegetarian, spicy and house-favourite tags, plus the allergen note
+- **Menu** — tabbed (Tacos, Antojitos, Platos Fuertes, Bebidas, Postres) with prices, V / VG / GF badges, spice level pips (1 to 3), a tortilla line (corn or flour), an "Ask about lard" note, and a "Contains" allergen line on every dish (the US nine, coconut on its own), all from `src/data/menu.ts`
+- **Allergy notice and raw advisory** — an editable notice under both menus; a dish marked `raw: true` gets an asterisk and the FDA Food Code consumer advisory
+- **Specials** — happy hour and Taco Tuesday as plain text, from `specials` in `src/data/site.ts`
+- **Catering** — a per-person price table with a minimum headcount and a notice period (`catering`)
 - **Takeout** — a band with the phone number, order by email and the pickup details
 - **Our story** — the owner's bio, a philosophy quote, a facts card and a regional-heritage note
 - **Gallery** — six photos with captions that say what each one shows
@@ -22,7 +25,7 @@ Comal is a free, plain-HTML website for a Mexican restaurant. Open `index.html` 
 - **Journal** — three posts and their pages
 - **Contact** — a plain form that opens the visitor's email app (no back end)
 - **Photo credits** — footer block, removable once you swap the photos
-- **Schema.org JSON-LD** — `Restaurant` with a `Menu` and the owner as `Person`
+- **Schema.org JSON-LD** — `Restaurant` with opening hours read from the same data as the hours table, a `Menu` built from the menu data, and the owner as `Person`
 - **Phone menu** that works without JavaScript
 - Self-hosted fonts, no trackers, no analytics, no external scripts.
 - Works from `file://` and from any host or sub-folder: every link is relative.
@@ -57,13 +60,13 @@ It is a folder of static files, so any static host works.
 
 ## Measured scores
 
-Lighthouse mobile, this folder served as static files, median of three runs (2 November 2026):
+Lighthouse mobile, this folder served as static files, median of three runs (11 November 2026):
 
 | Page | Performance | Accessibility | Best practices | SEO |
 |---|---:|---:|---:|---:|
 | Home | 95 | 100 | 100 | 100 |
 | Menu | 100 | 100 | 100 | 100 |
-| Journal | 96 | 100 | 100 | 100 |
+| Journal | 100 | 100 | 100 | 100 |
 | Contact | 100 | 100 | 100 | 100 |
 
 Your scores will vary with your host and photos.
